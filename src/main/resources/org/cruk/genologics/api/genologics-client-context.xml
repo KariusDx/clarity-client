@@ -107,6 +107,7 @@
         <property name="bufferRequestBody" value="true"/>
     </bean>
 
+    <!--
     <bean name="genologicsHttpClientTimingAspect" class="org.cruk.genologics.api.debugging.HttpClientTimingAspect"/>
 
     <aop:config>
@@ -116,6 +117,7 @@
                 method="timeCall"/>
         </aop:aspect>
     </aop:config>
+    -->
 
 
     <util:list id="genologicsModelPackages">
