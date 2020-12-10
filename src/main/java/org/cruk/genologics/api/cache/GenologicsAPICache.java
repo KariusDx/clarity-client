@@ -125,6 +125,11 @@ public class GenologicsAPICache
      */
     private Lock behaviourLock = new ReentrantLock();
 
+    /**
+     * Override for the cache behaviour for the next call.
+     */
+    private ThreadLocal<CacheStatefulBehaviour> behaviourOverride = new ThreadLocal<CacheStatefulBehaviour>();
+
 
     /**
      * Empty constructor.
@@ -467,7 +472,8 @@ public class GenologicsAPICache
                                 break;
 
                             case EXACT:
-                                if (version == NO_STATE_VALUE || version == wrapper.getVersion())
+                                //if (version == NO_STATE_VALUE || version == wrapper.getVersion())
+                                if (version != NO_STATE_VALUE && version == wrapper.getVersion())
                                 {
                                     genologicsObject = getFromWrapper(wrapper);
                                 }
