@@ -84,8 +84,8 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <dependency.locations.enabled>false</dependency.locations.enabled>
         <aspectj.version>1.9.6</aspectj.version>
-        <spring.context.version>5.3.3</spring.context.version>
-        <spring.integration.version>5.4.3</spring.integration.version>
+        <spring.context.version>5.3.5</spring.context.version>
+        <spring.integration.version>5.4.5</spring.integration.version>
         <aspectj.version>1.9.6</aspectj.version>
         <slf4j.version>1.7.30</slf4j.version>
     </properties>
@@ -532,7 +532,7 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.11</version>
+                <version>3.12.0</version>
             </dependency>
 
             <dependency>
