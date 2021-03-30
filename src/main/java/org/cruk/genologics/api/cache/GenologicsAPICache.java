@@ -125,11 +125,6 @@ public class GenologicsAPICache
      */
     private Lock behaviourLock = new ReentrantLock();
 
-    /**
-     * Override for the cache behaviour for the next call.
-     */
-    private ThreadLocal<CacheStatefulBehaviour> behaviourOverride = new ThreadLocal<CacheStatefulBehaviour>();
-
 
     /**
      * Empty constructor.
