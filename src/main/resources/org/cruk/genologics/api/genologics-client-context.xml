@@ -107,6 +107,7 @@
         <property name="bufferRequestBody" value="true"/>
     </bean>
 
+    <!--
     <bean name="genologicsHttpClientTimingAspect" class="org.cruk.genologics.api.debugging.HttpClientTimingAspect"/>
 
     <aop:config>
@@ -116,6 +117,7 @@
                 method="timeCall"/>
         </aop:aspect>
     </aop:config>
+    -->
 
 
     <util:list id="genologicsModelPackages">
@@ -265,6 +267,7 @@
         See https://brudenko.com/spring-bean-override
         As such, it is removed. Client programs must provide an implementation.
     -->
+    <bean id="genologicsAPI" parent="genologicsAPIBase"/>
 
     <bean id="genologicsLatestVersionsResetAspect" class="org.cruk.genologics.api.impl.LatestVersionsResetAspect">
         <property name="genologicsAPI" ref="genologicsAPI"/>

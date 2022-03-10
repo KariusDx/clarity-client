@@ -467,7 +467,8 @@ public class GenologicsAPICache
                                 break;
 
                             case EXACT:
-                                if (version == NO_STATE_VALUE || version == wrapper.getVersion())
+                                //if (version == NO_STATE_VALUE || version == wrapper.getVersion())
+                                if (version != NO_STATE_VALUE && version == wrapper.getVersion())
                                 {
                                     genologicsObject = getFromWrapper(wrapper);
                                 }
